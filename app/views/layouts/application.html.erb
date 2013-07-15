@@ -1,14 +1,50 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Pruebajose</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title><%= yield(:title) %></title>
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner navbar-newsoft">
+        <div class="container">
+          <%= link_to "Newsoft", '#', id: "logo" %>
+          <nav>
+            <ul class="nav pull-right main-nav-newsoft">
+              
 
-<%= yield %>
+              <li class="<%= 'selected' if current_page?(static_pages_index_path) %>" ><%= link_to "Inicio", '#' %></li>
 
-</body>
+              
+                <!--<div class="dropdown">-->
+                  <a href="#" class="dropdown-toggle", data-toggle="dropdown">Productos</a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                    <li>Recursos humanos</li>
+                    <li>Finanzas</li>
+                    <li>Construcci&oacute;n</li>
+                    <li>Manufactura</li>
+                    <li>Otras aplicaciones</li>
+                  </ul>
+                <!--</div>-->
+              </li>
+              <li><%= link_to "Partners", '#' %></li>
+              <li><%= link_to "Clientes", '#' %></li>
+              <li><%= link_to "Soporte", '#' %></li>
+              <li><%= link_to "Mejoras", '#' %></li>
+              <li><%= link_to "Contacto", '#' %></li>
+              <li><%= link_to "Preguntas Frecuentes", '#' %></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
 </html>

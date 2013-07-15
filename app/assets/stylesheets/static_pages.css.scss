@@ -1,0 +1,117 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.7em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #999;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  /*text-transform: uppercase;*/
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-inner.navbar-newsoft {
+	color: #FFF;
+  text-shadow:none;
+  height: 47px;
+	border: 1px solid #114885;
+	border-bottom: 0;
+	border-radius: 3px 3px 0 0;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+	margin-left: -1px;
+	margin-right: -1px;
+	margin-bottom: 0;
+	background: url('/assets/main-nav-bg.png');
+}
+
+.navbar-inverse .brand, .navbar-inverse .nav li a {
+  color:#FFF;
+}  
+
+.nav.pull-right.main-nav-newsoft{
+  height: 47px;
+}
+.nav.pull-right.main-nav-newsoft li{
+    line-height: 25px;
+}
+  
+.nav.pull-right.main-nav-newsoft li:hover{
+  background: url('/assets/main-nav-bg-hover.png');
+  height: 47px
+}
+
+.nav.pull-right.main-nav-newsoft li.selected{
+  background: url('/assets/main-nav-bg-hover.png');
+  height: 47px
+}
+
+/*
+.nav.pull-right.main-nav-newsoft li a{
+  height: 47px;
+}
+*/
